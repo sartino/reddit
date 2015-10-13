@@ -1,1 +1,13 @@
-<h1>Hello World!</h1>
+<h5>home vc html</h5>
+<h1>reddit</h1>
+
+<!--<plat-button class="button-primary gs-button" plat-tap="createpost">Create Post</plat-button>-->
+<plat-foreach plat-context="posts">
+    <div class="post">
+        <h2>{{data.title}}</h2>
+        <div class="info">
+            <span class="author">{{data.author}}</span>
+            <p class="content">{{data.url}}</p>
+        </div>
+    </div>
+</plat-foreach>
