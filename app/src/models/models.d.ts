@@ -2,6 +2,13 @@ declare module models {
 	interface IPost {
 		title: string,
 		author: string,
-		content: string
+		url: string,
+		id: string
+	}
+}
+
+declare module contexts {
+	interface IReadVCContext {
+		post: models.IPost
 	}
 }

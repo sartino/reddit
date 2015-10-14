@@ -1,16 +1,18 @@
 import {register} from 'platypus';
 import BaseViewControl from '../base/base.vc';
-import RedditService from '../../services/reddit/reddit.svc'
+// import RedditService from '../../services/reddit/reddit.svc'
+import DataRepository from '../../repositories/data/data.repo'
+import ReadViewControl from '../read/read.vc';
 
 export default class HomeViewControl extends BaseViewControl {
     templateString: string = require('./home.vc.html');
 
-    constructor(private redditSvc: RedditService) {
+    constructor(private dataRepo: DataRepository) {
         super();
     }
 
     navigatedTo(): void {
-        this.redditSvc.getPosts().then((posts) => {
+        this.dataRepo.getPosts().then((posts) => {
             this.context.posts = posts;
         });
     }
@@ -18,6 +20,16 @@ export default class HomeViewControl extends BaseViewControl {
     context: any = {
         posts: []
     };
+
+    readPost(postID: string): void {
+        // console.log(id);
+        // this.navigator.navigate('read-vc');
+         this.navigator.navigate('read-vc', {
+             parameters: {
+                 id: postID
+             }
+         });
+    }
 }
 
-register.viewControl('home-vc', HomeViewControl, [RedditService]);
+register.viewControl('home-vc', HomeViewControl, [DataRepository]);
