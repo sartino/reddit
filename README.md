@@ -4,7 +4,7 @@ The objective of this project is to use the PlatypusTS framework to create an ap
 
 Before begining, complete the [getting started guide](https://platypi.io/docs/getting-started).
 
-IMPORTANT NOTE!!!!!!!!!!!!!: Stop before compliting the deploy to a device step.
+IMPORTANT NOTE!!!!!!!!!!!!!: Stop before completing the deploy to a device step.
 
 #### Further Reading
 Typescript [type definition](https://blog.mariusschulz.com/2014/05/19/using-typescripts-type-definition-files-to-get-tooling-support-for-plain-javascript) files
@@ -26,7 +26,7 @@ Typescript [type definition](https://blog.mariusschulz.com/2014/05/19/using-type
 		$ npm start
 		~~~~~~
 
-The server will be running on http://localhost:3000 throught hte use of http-server npm module.
+The server will be running on http://localhost:3000 throught the use of http-server npm module.
 
 * Use the Reddit API to get a list of reddits. May use any end point.
 	-example apiendpoint: http://www.reddit.com/r/aww.json
@@ -44,7 +44,7 @@ The server will be running on http://localhost:3000 throught hte use of http-ser
 
 * Viewcontrols:
 	-enable user to switch between views
-	-listview to display a list of all reddits.
+	-listview to display a list of all reddits
 	-detail view to display the details of the reddit clicked
 		- should display info like author, title and actual reddit
 			- hint: can be done with an html [element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)

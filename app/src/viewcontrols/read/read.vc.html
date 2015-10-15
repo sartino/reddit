@@ -1,11 +1,16 @@
-<h5>read vc ts</h5>
+<!--<h5>read vc ts</h5>-->
 <plat-context="posts">
     <div class="post">
-        <h2> {{post.title}} Data Title goes here</h2>
+        <h2> {{post.title}}</h2>
         <div class="info">
             <span class="author">{{post.author}}</span>
-            <p class="content">{{post.url}}</p>
+            <div class='img'>
+                <!--<span plat-visible="{{post.url}}">ZZZ</span>-->
+                <iframe src="{{post.url}}" width="900" height="800"></iframe>
+                <!--<plat-image plat-src="{{post.url}}"></plat-image>-->
+                <!--<img src="{{post.url}}">-->
+            </div>
             <!--<p class="id">{{post.id}}</p>-->
         </div>
     </div>
-</plat-foreach>
+    <!--</plat-foreach>-->
